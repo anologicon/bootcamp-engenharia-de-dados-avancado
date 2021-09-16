@@ -1,0 +1,32 @@
+# Obrigatiorio no template: Resources
+# Buscar no google S3 cloud formation te traz a documentação
+# https://docs.aws.amazon.com/pt_br/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-name
+Resources:
+
+  BucketHowLegalS3:
+    Type: AWS::S3::Bucket
+    Properties: 
+      BucketName: bucket-how-legal
+      BucketEncryption: 
+        ServerSideEncryptionConfiguration: 
+          - ServerSideEncryptionByDefault: 
+              SSEAlgorithm: AES256
+      Tags: # Serve para gerenciar os recursos como centro de custo
+        - Key: owner
+          Value: how-bootcamp
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: True
+        BlockPublicPolicy: True
+        IgnorePublicAcls: True
+        RestrictPublicBuckets: True
+
+  BucketHowLegalS3Dois:
+    Type: AWS::S3::Bucket
+    Properties: 
+      BucketName: bucket-how-legal-dois
+  
+
+
+
+
+

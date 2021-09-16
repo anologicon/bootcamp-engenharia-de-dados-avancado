@@ -1,0 +1,11 @@
+{
+    "Name": "Paulo",
+    "Country": "Brazil",
+    "Sports": [
+        "Swimming",
+        "Walking"
+    ],
+    "Address": {
+        "Street": "Rua João Raimundi"
+    }
+}
